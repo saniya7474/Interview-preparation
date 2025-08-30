@@ -119,3 +119,9 @@ console.log(lmn);
 //What is the difference between every() and some() methods
 //shallow copy and deep copy
 //handle asynchronous code in three ways 1.callback function 2.promise 3.async&await
+ 
+const a = 10
+const b = 10
+const c = "10"
+
+console.log(a === b)
