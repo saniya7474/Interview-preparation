@@ -125,3 +125,43 @@ const b = 10
 const c = "10"
 
 console.log(a === b)
+
+
+// Asynchronous
+
+console.log("First")
+
+setTimeout(()=>{
+    console.log("Second")
+},1000)
+
+console.log("Third")
+
+// 1 .Callback  ==> Callback function passed as an arguments to another function , execute later
+
+function myfunction(secondfunction){
+    a=10,
+    b=20
+    // console.log("Hello")
+    secondfunction()
+    
+}
+function secondfunction(){
+    var abc = a+b;
+    console.log(abc)
+    //  console.log("Saniya")
+}
+
+myfunction(secondfunction);
+
+// 2.async and await
+// ==> async and await it latested version of promise , If we want to do any DB call that time we have to use async/await
+
+
+const getdata = async() =>{
+    try {
+    const userdata = await User.find()
+    } catch (error) {
+        console.log(error)
+    }
+}
