@@ -139,20 +139,17 @@ console.log("Third")
 
 // 1 .Callback  ==> Callback function passed as an arguments to another function , execute later
 
-function myfunction(secondfunction){
-    a=10,
-    b=20
-    // console.log("Hello")
-    secondfunction()
+function myfunction(a,b,secondfunction){
+    let sum = a+b;
+    secondfunction(sum)
     
 }
-function secondfunction(){
-    var abc = a+b;
-    console.log(abc)
-    //  console.log("Saniya")
+function secondfunction(result){
+   console.log("The Number is:" + result)
+   
 }
 
-myfunction(secondfunction);
+myfunction( 5 ,7,secondfunction);
 
 // 2.async and await
 // ==> async and await it latested version of promise , If we want to do any DB call that time we have to use async/await
